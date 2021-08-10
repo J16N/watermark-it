@@ -44,7 +44,7 @@ div.app > div.output-container
 
 div.app > div.output-container > div.output
 {
-    height: 99.5%;
+    height: 99%;
     border: 1px dashed black;
     border-style: solid dashed;
     border-radius: 10px;
