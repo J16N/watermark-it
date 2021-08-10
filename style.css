@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body 
+{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+header
+{
+    width: 100vw;
+    height: 10vh;
+    background: rgb(38, 71, 109);
+    color: white;
+    line-height: 10vh;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    word-spacing: 1rem;
+    letter-spacing: 0.1rem;
+
+}
+
+div.app
+{
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 1fr;
+    padding: 10px;
+}
+
+div.app > div.output-container
+{
+    position: relative;
+}
+
+div.app > div.output-container > div.output
+{
+    height: 99.5%;
+    border: 1px dashed black;
+    border-style: solid dashed;
+    border-radius: 10px;
+    padding: 10px;
+    white-space: pre-wrap;
+    font-size: 0.8rem;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+div.app > div.output-container > button.copy-all
+{
+    position: absolute;
+    z-index: 100;
+    top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 3px;
+    width: 6rem;
+    height: 2rem;
+    left: calc(100% - 6.5rem);
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+}
+
+div.app > textarea
+{
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+div.app > textarea:focus
+{
+    border-color: rgb(50, 147, 212);
+    border-width: 1.5px;
+}
+
+div.app > div.buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+div.app > div.buttons > select
+{
+    outline: none;
+    width: fit-content;
+    padding: 5px;
+}
+
+div.app > div.buttons > button
+{
+    width: 5.5rem;
+    padding: 5px;
+    text-align: center;
+    user-select: none;
+}
+
+@media screen and (max-width: 700px) {
+
+    div.app {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.3fr 1fr;
+    }
+
+    div.app > div.buttons
+    {
+        flex-direction: row;
+    }
+    
+}
